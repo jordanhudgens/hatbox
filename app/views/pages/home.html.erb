@@ -1,2 +1,172 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<style type="text/css">
+  html, body { overflow-x: hidden; }
+  .leader-unit {
+    background-color: #476098;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 100px;
+  }
+  .circle
+  {
+    width:50px;
+    height:50px;
+    border-radius:100px;
+    font-size:1.3em;
+    color:black;
+    line-height:500px;
+    text-align:center;
+    border: 1px #71848e solid;
+  }
+  .circle-content {
+    color: #71848e;
+    float: left;
+    line-height: 1;
+    margin-top: 7px;
+    padding-top: 50%;
+    text-align: center;
+    width: 100%;
+  }
+</style>
+
+<script type="text/javascript">
+(function($, window, undefined) {
+    // First check to see if the platform is an iPhone or iPod
+    if(/iP/.test(navigator.platform) &amp;&amp; /Safari/i.test(navigator.userAgent)){
+        var mobileSafari = "Safari";
+    }
+ 
+    // Set the div height
+    function setHeight($rightSidebar) {
+        var new_height = $(this).height();
+        // if mobileSafari add +60px
+        if (typeof mobileSafari === 'string'){ new_height += 60 };
+        $rightSidebar.css('height', new_height);
+    }
+ 
+    setHeight($('#right-sidebar'));
+    $(window).resize(function() {
+        setHeight.call(this, $('#right-sidebar'));
+    });
+ 
+}(jQuery, this));
+</script>
+
+<div class="leader-unit">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 left-header">
+        <p style="font-size: 5em;color: white;line-height: 90%;margin-top:80px;font-weight:900;">Your New Place for Hats</p>
+
+        <p style="font-size: 2em;color: white;line-height: 120%;margin-top:100px;">Coolest hats you've ever seen.</p>
+        
+      </div>
+      <div class="col-md-6 right-header hidden-xs">
+        <p>
+          <%= image_tag('hero_hat.png', width: '500', style: "margin-top: 25px;margin-left: 35px;") %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="container">
+  <h1 style="color: #1c7fff;text-align:center;margin-bottom:50px;">How it Works</h1>
+  <div class="col-md-1 column"></div>
+
+  <div class="col-md-5">
+    <div class="row clearfix">
+
+      <div class="row" style="margin-bottom:20px;">
+        <div class="col-md-2 circle">
+          <span class="circle-content">1</span>
+        </div>
+        <div class="col-md-10" style="color:#71848e;margin-top:-8px;">
+          <h3>Create your portfolio</h3>
+        </div>
+      </div>
+
+      <div class="row" style="margin-bottom:20px;">
+        <div class="col-md-2 circle">
+          <span class="circle-content">2</span>
+        </div>
+        <div class="col-md-10" style="color:#71848e;margin-top:-8px;">
+          <h3>Select the Competition</h3>
+        </div>
+      </div>
+
+      <div class="row" style="margin-bottom:20px;">
+        <div class="col-md-2 circle">
+          <span class="circle-content">3</span>
+        </div>
+        <div class="col-md-10" style="color:#71848e;margin-top:-8px;">
+          <h3>Win Cash Prizes</h3>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="col-md-5">
+    <%= image_tag('diagram.png', width: '300') %>
+  </div>
+
+  <div class="col-md-1 column"></div>
+</div>
+
+<br>
+<br>
+
+<hr>
+
+<br>
+<br>
+
+<div class="row" style="margin-top:50px;">
+  <h1 style="color: #1c7fff;text-align:center;margin-bottom:50px;">Benefits Of Using Stockchiefs</h1>
+  <div class="row">
+
+    <div class="col-md-1"></div>
+    
+    <div class="col-md-10">
+      <div class="col-md-4 column box">
+        <div class="row">
+          <div class="col-md-3" style="margin-top:20px;">
+            <%= image_tag('benefits_1.png', width: '60') %>
+          </div>
+          <div class="col-md-9">
+            <h3>Understand how the stock market works</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 box column">
+        <div class="row">
+          <div class="col-md-3" style="margin-top:20px;">
+            <%= image_tag('benefits_2.png', width: '60') %>
+          </div>
+          <div class="col-md-9">
+            <h3>Learn how to build a diversified portfolio</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 box column">
+        <div class="row">
+          <div class="col-md-3" style="margin-top:20px;">
+            <%= image_tag('benefits_3.png', width: '60') %>
+          </div>
+          <div class="col-md-9">
+            <h3>Maximize returns using our gaming platform</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-1"></div>
+  </div>
+  
+</div>
